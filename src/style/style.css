@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    font-family: 'Bebas Neue', normal;
+}
+
+@font-face {
+    font-family: 'Bebas Medium';
+    src: url("../fonts/BebasNeue-Medium.ttf");
+}
+
+@font-face {
+    font-family: 'Bebas Light';
+    src: url("../fonts/BebasNeue-Light.otf") format("opentype");
+}
+
+
+.jumbotron {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/tay-red.png");
+    background-size: cover;
+    height: 800px;
+    margin-bottom: 15px;
+}
+
+.jumbotron img {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.hero-title {
+    color: #a91e47;
+    font-size: 30em;
+    line-height: 0.7;
+    margin-top: 60px;
+    text-shadow: 5px 5px black;
+}
+
+.undertitle {
+    margin-left: 20px;
+    font-size: 5em;
+    color: white;
+    text-shadow: 5px 5px black;
+}
+
+/* QUOTES */
+.song-stories {
+    min-height: 500px;
+    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../img/redshoot.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 50px;
+}
+
+.quote-wrapper {
+    color: white;
+    margin-top: 90px;
+}
+
+.quote-wrapper h3 {
+    font-size: 50px;
+}
+
+.quote {
+    font-size: 2em;
+}
+
+/* TRIANGLES */
+.triangle {
+    z-index: 100;
+    right: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 250px 260px 250px 0;
+    border-color: transparent #a91e47 transparent transparent;
+    top: 580px;
+
+}
+
+.triangle-light {
+    z-index: 100;
+    right: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 250px 260px 250px 0;
+    border-color: transparent #a91e475c transparent transparent;
+    top: 540px;
+}
+
+.white-triangle-top {
+    z-index: 99;
+    bottom: -377px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 150px 150px 150px 0px;
+    border-color: white transparent transparent transparent;
+}
+
+.white-triangle-under {
+    z-index: 99;
+    right: 0;
+    bottom: -577px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0px 0px 245px 210px;
+    border-color: transparent transparent #ffffff transparent;
+}
+
+.triangle-left {
+    z-index: 100;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 125px 0px 125px 125px;
+    border-color: transparent transparent transparent #a91e47;
+    bottom: -701px;
+}
+
+.text-red {
+    color: #a91e47;
+}
+
+.marked-text {
+    background-color:black
+    ;color: #a91e47;
+}
+
+.triangle-left-light {
+    z-index: 100;
+    left: 0px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 125px 0px 125px 125px;
+    border-color: transparent transparent transparent #a91e474d;
+    bottom: -743px;
+}
+
+/* CAROUSEL */
+.review-wrapper {
+    min-height: 250px;
+    border-bottom: 5px solid #a91e47;
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev{
+    display:block;
+}
+
+.carousel-item img {
+    margin-bottom: 15px;
+    height: 30px;
+}
+
+.carousel a{
+    color: black;
+}
+
+.review-text {
+    font-family: 'Bebas Medium';
+    font-size: 1.8em;
+}
+
+.carousel-indicators li {
+    background-color: #a91e47;
+}
+
+/* signup */
+.form-group {
+    margin-top: 25px;
+}
+
+.signup-wrapper {
+    min-height: 400px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.signup-title {
+    text-align: center;
+    font-size: 5em;
+    letter-spacing: 3px;
+}
+
+.btn-signup {
+    background-color: #a91e47;
+    color: white;
+    letter-spacing: 1px;
+    border-radius: 0;
+    font-size: 2em;
+    width: 160px;
+}
+
+.regular-input::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+.country-placeholder {
+    color: red;
+    letter-spacing: 1px;
+}
+
+#birthdate {
+    width: 100%;
+    height: 37px;
+    letter-spacing: 1px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.form-check-input {
+    margin-left: 0;
+    -ms-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+}
+
+.form-check-input .form-check-input:checked{
+    background-color:black;
+}
+
+.bio-wrapper {
+    min-height: 680px;
+}
+
+/* 1 selector alle children */
+.form-group label {
+    margin-left: 25px;
+}
+
+/* TRACKLIST */
+#tay-glasses-text-wrapper {
+    background-color: #a91e47;
+    padding: 25px;
+    position: absolute;
+    width: 300px;
+    z-index: 101;
+}
+
+.tracklist-heading {
+    color: white;
+}
+
+.tay-glasses {
+    height: 530px;
+    background-image: url("../img/redglasses.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 60%;
+    z-index: 99;
+    margin-top: 40px;
+    float: right;
+}
+
+.tay-glasses-story {
+    position: relative;
+}
+
+.tay-glasses-behind {
+    background-color: #a91e484d;
+    position: absolute;
+    width: 250px;
+    z-index: 100;
+    left: 120px;
+    height: 550px;
+    top: 100px;
+}
+
+.standard-text {
+    font-family: "Bebas Medium";
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+
+.tracklist-list {
+    color: white;
+    font-size: 1.1em;
+}
+
+/* SPA */
+.advert {
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    z-index: 200;
+    visibility: visible;
+}
+
+.advert img {
+    height: 150px;
+}
+
+.sell-ribbon {
+    position: absolute;
+    text-align: center;
+    color: white;
+    background-color: #a91e47;
+    height: 40px;
+    width: 160px;
+    top: -15px;
+    left: -40px;
+    line-height: 40px;
+    letter-spacing: 1px;
+    -webkit-transform: skew(20deg); 
+    -moz-transform: skew(20deg); 
+    -o-transform: skew(20deg);
+    transform: skew(20deg);
+}
+
+.sell-ribbon-under {
+    background-color: #a91e4871;
+    height: 40px;
+    width: 160px;
+    position: absolute;
+    top: -15px;
+    left: -50px;
+    -webkit-transform: skew( 
+20deg);
+    -moz-transform: skew(20deg);
+    -o-transform: skew(20deg);
+    transform: skew( 
+20deg);
+}
+
+.sell-ribbon .unskew {
+    -webkit-transform: skew(-20deg); 
+    -moz-transform: skew(-20deg); 
+    -o-transform: skew(-20deg);
+    transform: skew(-20deg);
+}
+
+/* NAVBAR */
+.navbar {
+    height: 80px;
+}
+
+.navbar-brand {
+    color: black;
+    font-size: 2.5em;
+}
+
+.navigation-item {
+    color: white;
+    text-align: center;
+    font-size: 2em;
+}
+
+#red-line {
+    background-color: #a91e47;
+    height: 15px;
+}
+
+.jumbotron-content {
+  align-items: center;
+}
+
+/* picture book */
+.pictures {
+    float: left;
+}
+
+.pictures img {
+    max-width: 250px;
+}
+
+/* FOOTER */
+.footer {
+    background-color: black;
+    height: 50px;
+}
+
+.blox {
+    width: 200px; 
+    height: 200px;
+    float: left;
+}
+
+.lab {
+}
