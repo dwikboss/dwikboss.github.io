@@ -16,11 +16,11 @@
 
         <title>Blok 1 - BAWE</title>
         <style>
-            /* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); */
+            @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
         </style>
     </head>
     <body>
-        <div id="red-line"></div>
+        <div class="red-line"></div>
         <header class="jumbotron jumbotron-fluid">
             <div class="container">
                 <div class="row">
@@ -33,20 +33,20 @@
         </header>
 
         
-        <div class="white-triangle-top"></div>
-        <div class="triangle-left"></div>
-        <div class="triangle-left-light"></div>
-        <div class="triangle-light"></div>
-        <div class="triangle"></div>
-        <div class="white-triangle-under"></div>
+        <div class="triangle white-triangle-top"></div>
+        <div class="triangle triangle-left"></div>
+        <div class="triangle triangle-left-light"></div>
+        <div class="triangle triangle-light"></div>
+        <div class="triangle triangle"></div>
+        <div class="triangle white-triangle-under"></div>
 
         <main>
             <section class="song-stories">
                 <div class="container">
                     <div class="row justify-content-end">
-                        <div class="col-6">
+                        <div class="col-md-6 col-sm-12">
                             <article class="quote-wrapper">
-                                <h3>Lovin' you was <span class="text-red">RED</span></h3>
+                                <h3>Lovin' you was <span style="color: #a91e47;">RED</span></h3>
                                 <p class="quote">
                                     I look back on this as my true breakup album, every other album has flickers of different things, 
                                     but this was an album that I wrote specifically about pure, 
@@ -61,15 +61,15 @@
             <section class="bio-wrapper">
                 <div class="container">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-md-6 col-sm-12">
                             <article>
-                                <h2>Journey to <span class="marked-text">RED</span></h2>
+                                <h2>Journey to <span style="color: #a91e47;">RED</span></h2>
                                 <p class="standard-text">All the different emotions that are written about on this album are all pretty much about the kind of tumultuous, crazy, insane, intense, semi-toxic 
                                     relationships that I’ve experienced in the last two years. All those emotions — spanning from intense love, 
                                     intense frustration, jealousy, confusion, all of that — in my mind, all those emotions are red. 
                                     You know, there’s nothing in between. There’s nothing beige about any of those feelings.</p>
                             </article>
-                            
+                            <br/>
                             <article>
                                 <h2>Legacy</h2>
                                 <p class="standard-text">Red appeared on many publications' lists of the best albums of the 2010s decade. 
@@ -78,9 +78,9 @@
                                     In 2020, Rolling Stone ranked Red at number 99 on their revised list of the 500 Greatest Albums of All Time.</p>
                             </article>
                         </div>
-                        <div class="col-6">
+                        <div class="col-md-6 col-sm-12">
                             <div class="tay-glasses-story">
-                                <div id="tay-glasses-text-wrapper">
+                                <div class="tay-glasses-text-wrapper">
                                     <h3 class="tracklist-heading">Tracklist</h3>
                                     <div class="tracklist-list">
                                         <ol>
@@ -129,17 +129,17 @@
                         </ol>
                         <div class="carousel-inner">
                             <article class="carousel-item active text-center p-4">
-                                <img alt="pitchfork" src="src/img/pitchfork.png"/>
+                                <img src="src/img/pitchfork.png"/>
                                 <p class="review-text">"Red is an album of disappearances, of things that have gone or are just about to go missing—lost relationships, 
                                 old sounds, previous Taylor Swifts, each photographed just as they’re receding out of frame."</p>
                             </article>
                             <article class="carousel-item text-center p-4">
-                                <img alt="rollingstone" src="src/img/rollingstone.png"/>
+                                <img src="src/img/rollingstone.png"/>
                                 <p class="review-text">"Her self-discovery project is one of the best stories in pop. When she’s really on, her songs are like tattoos. 
                                     Red is a 16-song geyser of willful eclecticism that’s only tangentially related to Nashville."</p>
                             </article>
                             <article class="carousel-item text-center p-4">
-                                <img alt="billboard" src="src/img/billboard.png"/>
+                                <img src="src/img/billboard.png"/>
                                 <p class="review-text">"'Red' puts Swift the artist front and center with big, 
                                     beefy hooks that transcend her country roots for a genre-spanning record that reaches heights unseen since Shania Twain's 'Up!'"</p>
                             </article>
@@ -157,7 +157,6 @@
                             </h2>
                             <form method="POST" action="/">
                                 <fieldset class="signup-for">
-                                    <legend>User data</legend>
                                     <div class="form-row">
                                         <div class="col">
                                             <div class="form-group"> 
@@ -175,7 +174,7 @@
                                     <div class="form-row">
                                         <div class="col">
                                             <div class="form-group">
-                                                <label for="birthdate">Birthdate</label>
+                                                <label for="birthdate">Birthdate</label><br/>
                                                 <input type="date" id="birthdate" name="birthdate">
                                             </div>
                                         </div>
@@ -197,17 +196,17 @@
                                             <div class="form-group">
                                                 <p>Gender</p>
                                                 <input class="form-check-input" type="radio" name="radio" id="radio-male" value="male">
-                                                <label for="radio-male">
+                                                <label class="form-radio-label" for="radio-male">
                                                     Male
                                                 </label>
                                                 <br>
                                                 <input class="form-check-input" type="radio" name="radio" id="radio-female" value="female">
-                                                <label for="radio-female">
+                                                <label class="form-radio-label" for="radio-female">
                                                     Female
                                                 </label>
                                                 <br>
                                                 <input class="form-check-input" type="radio" name="radio" id="radio-other" value="other">
-                                                <label for="radio-other">
+                                                <label class="form-radio-label" for="radio-other">
                                                     Other
                                                 </label>
                                             </div>
@@ -217,7 +216,7 @@
                                                 <label class="form-check-label" for="defaultCheck1">
                                                     I have read and accepted the terms and conditions
                                                 </label>
-                                                
+                                                <br/>
                                                 <input class="form-check-input" type="checkbox" id="defaultCheck1">
                                             </div>
                                         </div>
@@ -225,7 +224,7 @@
                                     <div class="form-row">
                                         <div class="col">
                                             <div class="form-group">
-                                                <label for="textarea">Additional comments</label>
+                                                <label for="textarea">Additional comments</label><br/>
                                                 <textarea class="form-control" id="textarea" rows="3"></textarea>
                                             </div>
                                         </div>
@@ -242,7 +241,7 @@
 
             <a href="https://www.bol.com/nl/nl/p/red/1000004013031861/?bltgh=iFsshA3x7eoaZQ-LjLFCuQ.2_19.20.ProductImage" target="_blank">
                 <div class="advert">
-                    <img class="album" alt="redalbum" src="src/img/redalbum.jpg"/>
+                    <img class="album" src="src/img/redalbum.jpg"></img>
                     <div class="sell-ribbon-under"></div>
                     <div class="sell-ribbon">
                         <p class="unskew">Album now in stores!</p>
@@ -252,7 +251,32 @@
         </main>
 
         <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        CONTENTasd
+                    </div>
+                </div>
+            </div>
         </footer>
+
+        <!-- lab -->
+        <!-- <div class="container">
+            <div class="row">
+                <div class="lab" style="height: 500px; padding: 50px;">
+                    <div class="blox" style="background-color: red;"></div>
+                    <div class="blox" style="background-color: blue; clear:right;"></div>
+                    <div class="blox" style="background-color: green;"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="lab" style="height: 500px; padding: 50px;">
+                    <div class="box" style="border:1px solid red;height: 400px;width:400px;">
+                        <div style="background-color: green;width:120px;height:120px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
