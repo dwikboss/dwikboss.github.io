@@ -93,13 +93,14 @@ body {
 
 .white-triangle-top {
     z-index: 99;
-    bottom: -161px;
+    top: 815px;
     position: absolute;
     width: 0;
     height: 0;
     border-style: solid;
     border-width: 150px 150px 150px 0px;
     border-color: white transparent transparent transparent;
+    left: 0;
 }
 
 .white-triangle-under {
@@ -123,7 +124,7 @@ body {
     border-style: solid;
     border-width: 125px 0px 125px 125px;
     border-color: transparent transparent transparent #a91e47;
-    bottom: -486px;
+    top: 1205px;
 }
 
 .triangle-left-light {
@@ -135,7 +136,7 @@ body {
     border-style: solid;
     border-width: 125px 0px 125px 125px;
     border-color: transparent transparent transparent #a91e474d;
-    bottom: -525px;
+    top: 1165px;
 }
 
 /* CAROUSEL */
@@ -379,7 +380,97 @@ body {
     float: left;
 }
 
-.lab {
+/* LAB */
+html {
+    scroll-behavior: smooth;
+}
+
+.test-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 800px;
+    color: white;
+    font-size: 10rem;
+    letter-spacing: 5px;
+}
+
+.test-section:hover {
+    cursor: pointer;
+}
+
+.content {
+    font-size: 1rem;
+    color: white;
+    display: none;
+    justify-content: center;
+    height: 500px;
+}
+
+.content img {
+    height: 150px;
+    margin: 50px;
+}
+
+.content-text {
+    width: 80rem;
+    margin-bottom: 50px;
+    flex-basis: 600px;
+}
+
+.techlab {
+    background-color: #d9488b;
+}
+
+#tech-reveal {
+    background-color: #d9488b;
+}
+
+.team {
+    background-color: #2c87bf;
+}
+
+#team-reveal {
+    background-color: #2c87bf;
+}
+
+.winkel {
+    background-color: #91bf2c;
+}
+
+#winkel-reveal {
+    background-color: #91bf2c;
+}
+
+.veiligheid {
+    background-color: #f29f05;
+}
+
+#veiligheid-reveal {
+    background-color: #f29f05;
+}
+
+.nav-test {
+    position: fixed;
+    left: 40px;
+    top: 200px;
+    font-size: 2rem;
+}
+
+.nav-test ul {
+    list-style: none;
+}
+
+.nav-test a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+.nav-test a:hover {
+    transform: scale(1.2);
 }
 
 /* MEDIA QUERIES */

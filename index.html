@@ -14,6 +14,8 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="src/style/style.css">
 
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
         <title>Blok 1 - BAWE</title>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
@@ -261,26 +263,73 @@
         </footer>
 
         <!-- lab -->
-        <!-- <div class="container">
-            <div class="row">
-                <div class="lab" style="height: 500px; padding: 50px;">
-                    <div class="blox" style="background-color: red;"></div>
-                    <div class="blox" style="background-color: blue; clear:right;"></div>
-                    <div class="blox" style="background-color: green;"></div>
-                </div>
+        <div class="cmd-container">
+            <div class="nav-test">
+                <ul>
+                    <li><a href="#tech">Techlab</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#winkel">Winkel</a></li>
+                    <li><a href="#veiligheid">Veiligheid</a></li>
+                </ul>
             </div>
-            <div class="row">
-                <div class="lab" style="height: 500px; padding: 50px;">
-                    <div class="box" style="border:1px solid red;height: 400px;width:400px;">
-                        <div style="background-color: green;width:120px;height:120px;"></div>
-                    </div>
-                </div>
+
+            <div id="tech" class="test-section techlab">
+                CMD TECHLAB
             </div>
-        </div> -->
+            <div id="tech-reveal" class="content">
+                <div class="content-text">
+                    <h2>Voorbeeld</h2>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.
+                </div>
+                <img src="src/img/avans.png" alt="avans">
+            </div>
+            <div id="team" class="test-section team">
+                TEAM
+            </div>
+            <div id="team-reveal" class="content">
+                <div class="content-text">
+                    <h2>Voorbeeld</h2>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.
+                </div>
+                <img src="src/img/avans.png" alt="avans">
+            </div>
+            <div id="winkel" class="test-section winkel">
+                WINKEL
+            </div>
+            <div id="winkel-reveal" class="content">
+                <div class="content-text">
+                    <h2>Voorbeeld</h2>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.
+                </div>
+                <img src="src/img/avans.png" alt="avans">
+            </div>
+            <div id="veiligheid" class="test-section veiligheid">
+                VEILIGHEID
+            </div>
+            <div id="veiligheid-reveal" class="content">
+                <div class="content-text">
+                    <h2>Voorbeeld</h2>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.
+                </div>
+                <img src="src/img/avans.png" alt="avans">
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $(".test-section").click(function() {
+                    $id = $(this).attr("id");
+                    $content = $id + "-reveal";
+
+                    $content_id = "#" + $content;
+
+                    $($content_id).slideToggle(500);
+                    $($content_id).css('display', 'flex');
+                });
+            });
+        </script>
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </body>
