@@ -22,6 +22,26 @@
         </style>
     </head>
     <body>
+        <!-- NAV OVERLAY -->
+        <div id="overlayNav" class="overlay-panel">
+            <div class="overlay-content">
+                <ul>
+                    <li>
+                        <a id="panel-hover-tech" href="#tech">Techlab</a>
+                    </li>
+                    <li>
+                        <a id="panel-hover-team" href="#team">Team</a>
+                    </li>
+                    <li>
+                        <a id="panel-hover-winkel" href="#winkel">Winkel</a>
+                    </li>
+                    <li>
+                        <a id="panel-hover-veiligheid" href="#veiligheid">Veiligheid</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
         <div class="red-line"></div>
         <header class="jumbotron jumbotron-fluid">
             <div class="container">
@@ -264,6 +284,8 @@
 
         <!-- lab -->
         <div class="cmd-container">
+
+            <!-- FIXED NAV RIGHT -->
             <div class="nav-test2">
                 <ul>
                     <li>
@@ -283,7 +305,13 @@
                     </li>
                 </ul>
             </div>
-            
+
+            <!-- HAMBURGER -->
+            <div class="hamburger-nav">
+                <div class="hamburger-btn"></div>
+            </div>
+
+            <!-- FIXED NAV LEFT -->
             <div class="nav-test">
                 <ul>
                     <li>
@@ -344,6 +372,24 @@
         </div>
         <script>
             $(document).ready(function() {
+                var hamburgerOpen = false;
+
+                // Underline color
+                $('a', $('.overlay-content')).each(function () {
+                    console.log($(this).attr("id"));
+
+                    if ($(this).attr("id") == "panel-hover-tech") {
+                        $(this).addClass("apply-pink");
+                    } else if ($(this).attr("id") == "panel-hover-team") {
+                        $(this).addClass("apply-blue");
+                    } else if ($(this).attr("id") == "panel-hover-winkel") {
+                        $(this).addClass("apply-green");
+                    } else {
+                        $(this).addClass("apply-orange");  
+                    }
+                });
+                
+                // Slide toggle
                 $(".test-section").click(function() {
                     $id = $(this).attr("id");
                     $content = $id + "-reveal";
@@ -352,6 +398,19 @@
 
                     $($content_id).slideToggle(500);
                     $($content_id).css('display', 'flex');
+                });
+
+                // Hamburger
+                $(".hamburger-nav").click(function() {
+                    if (!hamburgerOpen) {
+                        $(".hamburger-nav").addClass('open');
+                        $("#overlayNav").css("height", "100%");
+                        hamburgerOpen = true;
+                    } else {
+                        $(".hamburger-nav").removeClass('open');
+                        $("#overlayNav").css("height", "0%");
+                        hamburgerOpen = false; 
+                    }
                 });
             });
         </script>

@@ -471,10 +471,9 @@ html {
 }
 
 /* HORIZONTAL NAV */
-
 .nav-test2 {
     position: fixed;
-    right: 50px;
+    right: 150px;
     top: 40px;
     font-size: 2rem;
     z-index: 200;
@@ -499,6 +498,124 @@ html {
 
 .nav-test a:hover {
     transform: scale(1.2);
+}
+
+/* HAMBURGER NAV */
+.hamburger-nav {
+    position: fixed;
+    right: 50px;
+    top: 32px;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    width: 60px;
+    height: 60px;
+    z-index: 202;
+}
+
+.hamburger-btn {
+    width: 50px;
+    height: 5px;
+    background: white;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.hamburger-btn::before,
+.hamburger-btn::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background: white;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.hamburger-btn::before {
+    transform: translateY(-16px);
+}
+
+.hamburger-btn::after {
+    transform: translateY(16px);
+}
+
+/* an */
+.hamburger-nav.open .hamburger-btn {
+    background: transparent;
+}
+
+.hamburger-nav.open .hamburger-btn::before {
+    transform: rotate(-45deg);
+    background: black;
+}
+
+.hamburger-nav.open .hamburger-btn::after {
+    transform: rotate(45deg);
+    background: black;
+}
+
+/* OVERLAY */
+.overlay-panel {
+    letter-spacing: 5px;
+    height: 0%;
+    width: 100%;
+    background: white;
+    position: fixed;
+    z-index: 201;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease-in-out;
+    overflow-y: hidden;
+}
+
+.overlay-panel .overlay-content ul {
+    list-style: none;
+    font-size: 5rem;
+}
+
+.overlay-panel .overlay-content a {
+    color: black;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+}
+
+.overlay-panel .overlay-content a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 8px;
+    bottom: 15px;
+    left: 0;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+}
+
+.overlay-panel .overlay-content a.apply-pink::after {
+    background-color: #d9488b;
+}
+
+.overlay-panel .overlay-content a.apply-blue::after {
+    background-color: #2c87bf;
+}
+
+.overlay-panel .overlay-content a.apply-green::after {
+    background-color: #91bf2c;
+}
+
+.overlay-panel .overlay-content a.apply-orange::after {
+    background-color: #f29f05;
+}
+
+.overlay-panel .overlay-content a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 /* MEDIA QUERIES */
